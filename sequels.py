@@ -210,6 +210,7 @@ query ($ids: [Int], $page: Int) {
       id
       title {
         english
+        romaji
       }
       coverImage {
         medium
@@ -254,14 +255,14 @@ def get_card(id):
     
     <div data-v-13cdaed6="" class="cover" style="background-image: url(&quot;{info['IMG']}&quot;);"></div> 
     <div data-v-13cdaed6="" class="wrap">
-        <div data-v-13cdaed6="" class="title">{info['title']['english']}</div> 
+        <div data-v-13cdaed6="" class="title">{info['title']['english'] if info['title']['english'] is not None else info['title']['romaji']}</div> 
         <div data-v-13cdaed6="" class="info">
             <div data-v-13cdaed6="" class="genres">
-                <span data-v-13cdaed6="">{info['genres'][0]}<span data-v-13cdaed6="" style="display: none;"></span></span>
+                <span data-v-13cdaed6="">{', '.join(info['genres'])}<span data-v-13cdaed6="" style="display: none;"></span></span>
             </div> 
-            <span data-v-13cdaed6="">{info['format']} ·</span> 
-            <span data-v-13cdaed6="">{info['status']} ·</span> 
-            <span data-v-13cdaed6="">{info['episodes']}EP ·</span> 
+            <span data-v-13cdaed6="">{info['format']} -</span> 
+            <span data-v-13cdaed6="">{info['status']} -</span> 
+            <span data-v-13cdaed6="">{info['episodes']}EP -</span> 
             <span data-v-13cdaed6="">{info['duration']}min</span>
         </div>
     </div>
@@ -279,7 +280,7 @@ if len(NEW) != 0:
     HTML += f'<h1>Your Sequels Which Are Not In Your List - {len(NEW)}</h1>'
     HTML += '<br><br>'.join([get_card(i) for i in NEW])
     HTML += '</article></body></html>'
-    f = open(file_n, 'w')
+    f = open(file_n, 'w', encoding="utf-8")
     f.write(HTML)
     print('DONE: FOUND', len(NEW), 'ADDITIONS TO YOUR LIST')
     webbrowser.open(file_n)
