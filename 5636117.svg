@@ -1,0 +1,46 @@
+
+
+
+
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="455" height="225">
+    <style>
+        .shadow {
+            filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.7));
+        }
+        .circle {
+            animation: progress 3s ease-out forwards;
+        }
+        @keyframes progress {
+            0% {
+                stroke-dasharray: 0 500;
+            }
+        }
+    </style>
+    
+    
+    
+    
+    
+    
+    
+    <g class="shadow">
+        <rect fill="rgb(248, 248, 255)" stroke="none" class="card" x="90" y="10" rx="9" ry="9" width="350" height="200" />
+        
+        <path class="circle" stroke-linecap="round" d="M 90 30 a 80 80 0 0 1 0 160 a 80 80 0 0 1 0 -160" fill="none" stroke="#eeeeee" stroke-width="12" stroke-dasharray="999.9999999999999, 500" />
+        <path class="circle" stroke-linecap="round" d="M 90 30 a 80 80 0 0 1 0 160 a 80 80 0 0 1 0 -160" fill="none" stroke="#4CC790" stroke-width="12" stroke-dasharray="500.0, 500" />
+        <path class="circle" stroke-linecap="round" d="M 90 30 a 80 80 0 0 1 0 160 a 80 80 0 0 1 0 -160" fill="none" stroke="#3c9ee5" stroke-width="12" stroke-dasharray="475.40983606557376, 500" />
+        <path class="circle" stroke-linecap="round" d="M 90 30 a 80 80 0 0 1 0 160 a 80 80 0 0 1 0 -160" fill="none" stroke="#e1e85f" stroke-width="12" stroke-dasharray="311.4754098360656, 500" />
+        <path class="circle" stroke-linecap="round" d="M 90 30 a 80 80 0 0 1 0 160 a 80 80 0 0 1 0 -160" fill="none" stroke="#eb3434" stroke-width="12" stroke-dasharray="16.393442622950822, 500" />
+        
+        <image x="10" y="30" width="160" height="160" clip-path="inset(5px round 50%)" xlink:href="https://s4.anilist.co/file/anilistcdn/user/avatar/large/b5636117-Ym43FzTJjYYp.png"></image>
+        </g>
+    
+    <text font-size="24px" font-family="sans-serif" fill="#3c9ee5" stroke="#3c9ee5" x="180" y="40">@RoamingCookie</text>
+    
+    <text font-size="14px" font-family="sans-serif" fill="#666666" stroke="#666666" x="220" y="70" stroke-width="1">Anime Watched: 192</text>
+    <text font-size="14px" font-family="sans-serif" fill="#666666" stroke="#666666" x="220" y="100" stroke-width="1">Title Watched: 435</text>
+    <text font-size="14px" font-family="sans-serif" fill="#666666" stroke="#666666" x="220" y="130" stroke-width="1">Episode Watched: 3911</text>
+    <text font-size="14px" font-family="sans-serif" fill="#666666" stroke="#666666" x="220" y="160" stroke-width="1">Watch Time: 60.3 Day&#39;s</text>
+    
+    <text font-size="10px" font-family="sans-serif" fill="#cccccc" stroke="#cccccc" x="325" y="205">Updated 2 hour ago</text>
+</svg>
